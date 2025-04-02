@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXP League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #2d2d2d;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            color: #ff5500;
+            display: inline;
+        }
+
+        .tournaments {
+            padding: 6rem 2rem 2rem;
+        }
+
+        .tournaments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tournament-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .tournament-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tournament-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tournament-info {
+            padding: 1rem;
+            background-color: #333;
+        }
+
+        .timeline {
+            padding: 2rem;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ff5500;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 2rem;
+            background-color: #2d2d2d;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff5500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>EXP League</h1>
+    </nav>
+
+    <section class="tournaments">
+        <h2>Все турниры</h2>
+        <div class="tournaments-grid">
+            <!-- Повторить блок для каждого чемпионата -->
+            <div class="tournament-card">
+                <img src="" alt="Чемпионат 1">
+                <div class="tournament-info">
+                    <h3>EXP League BLITZ S1: 2v2</h3>
+                    <p>Дата: 18 марта - сейчас</p>
+                    <p>Участники: 18 команд</p>
+					<p>Формат: 2х2, два этапа квалификаций, групповой этап и плей-офф</p>
+                    <p>Призовой фонд: $6</p>
+                </div>
+            </div>
+            <!-- Остальные чемпионаты -->
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h2>История лиги</h2>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>17 июля 2024 - Основание</h3>
+                <p>Проведение первого турнира IVFAcup по Counter Strike 2 в формате дуэлей.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>20 августа 2024 - Второй турнир</h3>
+                <p>Проведение IVFAcup Wingman по Counter-Strike 2 в формате 2х2. Значительное увеличение аудитории, самый большой призовой фонд в истории рофл-футбола.</p>
+            </div>
+        </div>
+        <!-- Добавить остальные события -->
+		<div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>30 октября 2024 - Администрация</h3>
+                <p>Создание Администрации лиги из 4-х человек, подготовка к самому масштабному стороннему проекту в истории рофл-футбола.</p>
+            </div>
+        </div>
+		<div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>1 ноября 2024 - Анонс IVFAcup Winter</h3>
+                <p>Открытие регистрации на IVFAcup Winter 5x5, начало масштабной подготовки.</p>
+            </div>
+        </div>
+		<div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>30 ноября 2024 - Первый шоу-матч</h3>
+                <p>Первый шоу-матч между Твиксом и Тюкаловым против Корнея и Бонфанти. Тестирование новых возможностей для трансляций, улучшение продакшена.</p>
+            </div>
+        </div>
+		<div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>15 декабря 2024 - IVFAcup Winter 5x5</h3>
+                <p>Начало IVFAcup Winter 5x5, значительное улучшение качества трансляций, появление собственного сервера.</p>
+            </div>
+        </div>
+		<div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>1 января 2025 - Новый год —— новая эра</h3>
+                <p>Ребрендинг в EXP League - начало нового этапа в жизни лиги.</p>
+            </div>
+        </div>
+		<div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>10 января 2025 - IFTL e-Sports</h3>
+                <p>Начало сотрудничества с IFTL e-Sports, которое дало больше рекламных возможностей для продвижения лиги.</p>
+            </div>
+        </div>
+		<div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>18 марта 2025 - мы сейчас здесь</h3>
+                <p>Введение Регламента и ИРИ, проведение турнира EXP League BLITZ S1: 2v2, появление структуры турниров, и дальше только больше!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="social-links">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+		<p>© 2024-2025 EXP League Esports, LLC. Все права защищены.</p>
+    </footer>
+</body>
+</html>
